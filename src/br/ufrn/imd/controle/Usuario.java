@@ -6,10 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Usuario extends DB {
-    public int id;
-    public String nome;
-    public String email;
-    public String senha;
+
+    private int id;
+    private String nome;
+    private String email;
+    private String senha;
 
     @Override
     public String toString() {

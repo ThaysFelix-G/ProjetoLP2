@@ -7,15 +7,25 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
-import java.util.stream.Stream;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DB implements Crud {
+
+//    BufferedWriter  pw;
+//    BufferedReader in;
 
     String p;
     public DB(){}
     public DB(String caminho) throws IOException {
+//        String s = "src\\br\\ufrn\\imd\\dao\\";
+//        s+=caminho;
         p = caminho;
+//        arquivo = new File(caminho);
+//        in = new BufferedReader(new FileReader(arquivo));
+//        pw = new BufferedWriter(new FileWriter(arquivo,true));
+
     }
     private void escreverLinha(String texto, boolean override) throws IOException {
         try {
@@ -36,6 +46,9 @@ public class DB implements Crud {
             String insert = (count / 4) + 1 + "\n" +((Usuario) object).toString();
             this.escreverLinha(insert, true);
         }
+        /*else
+        {
+        }*/
         return true;
     }
 
@@ -51,9 +64,9 @@ public class DB implements Crud {
             if (linha.equals(Integer.toString(id))) {
                 int count = 0;
                 while ((linha = in.readLine()) != null) {
-                    if (count ==  2) {
+                     if (count ==  2) {
                         break;
-                    }
+                     }
                     count++;
                 }
             } else{
