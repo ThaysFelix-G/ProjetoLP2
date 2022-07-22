@@ -1,7 +1,7 @@
-package main.java.br.ufrn.imd.dao;
+package br.ufrn.imd.dao;
 
-import main.java.br.ufrn.imd.controle.Usuario;
-import main.java.br.ufrn.imd.interfaces.Crud;
+import br.ufrn.imd.controle.Usuario;
+import br.ufrn.imd.interfaces.Crud;
 
 import java.io.*;
 import java.nio.file.Files;

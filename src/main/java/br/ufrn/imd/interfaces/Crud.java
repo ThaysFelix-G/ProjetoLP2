@@ -1,6 +1,5 @@
-package main.java.br.ufrn.imd.interfaces;
+package br.ufrn.imd.interfaces;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface Crud <T>{

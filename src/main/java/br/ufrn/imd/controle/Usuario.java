@@ -1,8 +1,7 @@
-package main.java.br.ufrn.imd.controle;
+package br.ufrn.imd.controle;
 
-import main.java.br.ufrn.imd.dao.DB;
+import br.ufrn.imd.dao.DB;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Usuario extends DB {
@@ -12,7 +11,7 @@ public class Usuario extends DB {
     private String email;
     private String senha;
 
-    @Override
+
     public String toString() {
         return  "" + nome + '\n' +
                 "" + email + '\n' +

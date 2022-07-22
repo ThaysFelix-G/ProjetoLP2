@@ -1,13 +1,9 @@
-package main.java.br.ufrn.imd.visao;
+package br.ufrn.imd.visao;
 
-import main.java.br.ufrn.imd.controle.Usuario;
+import br.ufrn.imd.controle.Usuario;
 
-import javax.sound.midi.Soundbank;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -64,9 +60,10 @@ public class Main {
                     continue;
                 }
                 case 2: {
+                    Scanner leitor = new Scanner(System.in);
                     System.out.print("Informe o id do usuario que deseja remover: ");
                     Usuario user = new Usuario(p);
-                    int id = leia.nextInt();
+                    int id = leitor.nextInt();
                     Object u = new Usuario();
                     u = user.ler(id);
                     user.remover(id);
@@ -78,17 +75,18 @@ public class Main {
 
                 }
                 case 3:{
+                    Scanner leitor = new Scanner(System.in);
                     Usuario user = new Usuario(p);
                     System.out.print("Digite o id do usuario: ");
                     //int id = leia.nextInt();
-                    int id = Integer.parseInt(leia.nextLine());
+                    int id = Integer.parseInt(leitor.nextLine());
                     user.setId(id);
                     System.out.print("Digite o novo nome do usuario: ");
-                    user.setNome(leia.nextLine());
+                    user.setNome(leitor.nextLine());
                     System.out.print("Digite o novo email do usuario: ");
-                    user.setEmail(leia.nextLine());
+                    user.setEmail(leitor.nextLine());
                     System.out.print("Digite a nova senha do usuario: ");
-                    user.setSenha(leia.nextLine());
+                    user.setSenha(leitor.nextLine());
                     user.atualizar(user);
                     System.out.println("Usuario atualizado com sucesso!!!!");
                     continue;
